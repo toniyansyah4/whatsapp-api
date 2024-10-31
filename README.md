@@ -10,3 +10,7 @@
 - Run `php artisan key:generate`
 - Run `php artisan storage:link`
 - Run `php artisan serve`
+
+
+## Postman
+Documenter API : https://documenter.getpostman.com/view/9885485/2sAY4vh325
