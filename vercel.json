@@ -10,6 +10,7 @@
     ],
     "public": true,
     "buildCommand": "vite build",
+    "installCommand": "composer install",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
