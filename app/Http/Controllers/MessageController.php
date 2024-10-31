@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageSent;
 use App\Http\Requests\MessageRequest;
 use App\Models\Chatroom;
 use Illuminate\Http\Request;
@@ -20,6 +21,8 @@ class MessageController extends Controller
             $path = $request->file('attachment')->store('attachments');
             $message->attachments()->create(['file_path' => $path]);
         }
+
+        broadcast(new MessageSent($message))->toOthers();
 
         return response()->json($message, 201);
     }
