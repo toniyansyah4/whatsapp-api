@@ -1,6 +1,7 @@
 ## Setup
 - `cp .env.example .env`
-- Now change `.env` file and db details
+- Now change `.env` file
+- Change configuration DB and Pusher
 - Run `composer install`
 - Run `php artisan migrate`
 - Run `npm install`
